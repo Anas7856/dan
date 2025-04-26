@@ -19,6 +19,7 @@
   </head>
 
   <body>
+    <div id="loading-overlay"></div>
     <!-- Navbar -->
     <nav class="navbar">
       <div class="navbar-img-box">
@@ -96,6 +97,11 @@
       window.addEventListener("load", function () {
         // Trigger logo transition after page load
         document.body.classList.add("loaded");
+
+        // Delay the removal of the loading overlay (e.g., 3000ms = 3 seconds)
+        setTimeout(function () {
+          document.getElementById("loading-overlay").style.display = "none";
+        }, 900); // Change 3000 to any duration you prefer (in milliseconds)
       });
     </script>
   </body>
